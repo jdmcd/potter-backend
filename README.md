@@ -6,8 +6,6 @@ An API created for the students of Professor Gallaugher's Swift class for their 
 ### Get All Spells
 `Endpoint`: https://potterspells.herokuapp.com/api/v1/spells
 
-`Method`: `GET`
-
 `Response`:
 
 ```json
@@ -26,8 +24,6 @@ An API created for the students of Professor Gallaugher's Swift class for their 
 
 ### Get Single Spell
 `Endpoint`: https://potterspells.herokuapp.com/api/v1/spell/spell_id
-
-`Method`: `GET`
 
 `Response`:
 
