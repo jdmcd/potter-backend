@@ -5,18 +5,20 @@ An API created for the students of Professor Gallaugher's Swift class for their 
 
 ### Get All Spells
 `Endpoint`: https://potterspells.herokuapp.com/api/v1/spells
+
 `Method`: `GET`
+
 `Response`:
 
 ```json
 {
-  results: [
+  "results": [
     {
-      id: 1,
-      soundFile: "Accio_Dittany",
-      name: "Accio Dittany",
-      description: "Accio Dittany will summon a dittany, if available. Dittany is a magical plant used in Potion-Making, and is a powerful healing herb and restorative. Use this when you are injured and need healing.",
-      url: "https://potterspells.herokuapp.com/api/v1/spell/1"
+      "id": 1,
+      "soundFile": "Accio_Dittany",
+      "name": "Accio Dittany",
+      "description": "Accio Dittany will summon a dittany, if available. Dittany is a magical plant used in Potion-Making, and is a powerful healing herb and restorative. Use this when you are injured and need healing.",
+      "url": "https://potterspells.herokuapp.com/api/v1/spell/1"
     }
   ]
 }
@@ -24,15 +26,17 @@ An API created for the students of Professor Gallaugher's Swift class for their 
 
 ### Get Single Spell
 `Endpoint`: https://potterspells.herokuapp.com/api/v1/spell/spell_id
+
 `Method`: `GET`
+
 `Response`:
 
 ```json
 {
-    id: 1,
-    soundFile: "Accio_Dittany",
-    name: "Accio Dittany",
-    description: "Accio Dittany will summon a dittany, if available. Dittany is a magical plant used in Potion-Making, and is a powerful healing herb and restorative. Use this when you are injured and need healing.",
-    url: "https://potterspells.herokuapp.com/api/v1/spell/1"
+    "id": 1,
+    "soundFile": "Accio_Dittany",
+    "name": "Accio Dittany",
+    "description": "Accio Dittany will summon a dittany, if available. Dittany is a magical plant used in Potion-Making, and is a powerful healing herb and restorative. Use this when you are injured and need healing.",
+    "url": "https://potterspells.herokuapp.com/api/v1/spell/1"
 }
 ```
