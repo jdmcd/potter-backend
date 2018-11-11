@@ -10,7 +10,7 @@ final class PotterController: RouteCollection {
    
     func allSpells(req: Request) throws -> Future<SpellResponse> {
         return Spell.query(on: req).all().map { spells in
-            return SpellResponse(results: spells)
+            return try SpellResponse(results: spells.map { try SpellResponse.Spell(spell: $0) } )
         }
     }
     
