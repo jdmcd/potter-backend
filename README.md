@@ -1,5 +1,38 @@
-# Transeo Vapor Template
+# Potter API 
+An API created for the students of Professor Gallaugher's Swift class for their second midterm. 
 
-This template serves as a starting point for all Vapor 3 projects in the Transeo org. You can start a new project by running:
-    
-    vapor new ProjectName --template=gotranseo/template
+# Usage
+
+### Get All Spells
+`Endpoint`: https://potterspells.herokuapp.com/api/v1/spells
+`Method`: `GET`
+`Response`:
+
+```json
+{
+  results: [
+    {
+      id: 1,
+      soundFile: "Accio_Dittany",
+      name: "Accio Dittany",
+      description: "Accio Dittany will summon a dittany, if available. Dittany is a magical plant used in Potion-Making, and is a powerful healing herb and restorative. Use this when you are injured and need healing.",
+      url: "https://potterspells.herokuapp.com/api/v1/spell/1"
+    }
+  ]
+}
+```
+
+### Get Single Spell
+`Endpoint`: https://potterspells.herokuapp.com/api/v1/spell/spell_id
+`Method`: `GET`
+`Response`:
+
+```json
+{
+    id: 1,
+    soundFile: "Accio_Dittany",
+    name: "Accio Dittany",
+    description: "Accio Dittany will summon a dittany, if available. Dittany is a magical plant used in Potion-Making, and is a powerful healing herb and restorative. Use this when you are injured and need healing.",
+    url: "https://potterspells.herokuapp.com/api/v1/spell/1"
+}
+```
