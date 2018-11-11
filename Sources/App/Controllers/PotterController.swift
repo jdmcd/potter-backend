@@ -8,9 +8,9 @@ final class PotterController: RouteCollection {
         build.get("spell", Spell.parameter, use: spell)
     }
    
-    func allSpells(req: Request) throws -> Future<PaginatedSpellResponse> {
+    func allSpells(req: Request) throws -> Future<SpellResponse> {
         return Spell.query(on: req).all().map { spells in
-            return PaginatedSpellResponse(results: spells)
+            return SpellResponse(results: spells)
         }
     }
     

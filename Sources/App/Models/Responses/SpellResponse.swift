@@ -8,6 +8,6 @@
 import Foundation
 import Vapor
 
-struct PaginatedSpellResponse: Content {
+struct SpellResponse: Content {
     let results: [Spell]
 }
