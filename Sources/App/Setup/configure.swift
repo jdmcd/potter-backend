@@ -35,9 +35,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     // MARK: - Database connections limit
     if env.isRelease, let envVariable = Environment.get(Constants.maxConnections) {
         guard let count = Int(envVariable) else { throw Abort(.internalServerError) }
-        services.register { _ -> DatabaseConnectionPoolConfig in
-            return DatabaseConnectionPoolConfig(maxConnections: count)
-        }
+        services.register(DatabaseConnectionPoolConfig(maxConnections: count))
     }
     
     // MARK: -  Command Config
