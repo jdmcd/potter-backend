@@ -9,4 +9,5 @@ import Foundation
 
 struct Constants {
     static let databaseURL = "DATABASE_URL"
+    static let maxConnections = "MAX_DATABASE_CONNECTIONS_PER_CORE"
 }

@@ -31,6 +31,14 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
         try migrate(migrations: &migrationConfig)
         return migrationConfig
     }
+
+    // MARK: - Database connections limit
+    if env.isRelease, let envVariable = Environment.get(Constants.maxConnections) {
+        guard let count = Int(envVariable) else { throw Abort(.internalServerError) }
+        services.register { _ -> DatabaseConnectionPoolConfig in
+            return DatabaseConnectionPoolConfig(maxConnections: count)
+        }
+    }
     
     // MARK: -  Command Config
     services.register { _ -> CommandConfig in
