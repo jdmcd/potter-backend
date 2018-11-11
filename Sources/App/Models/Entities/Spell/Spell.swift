@@ -21,6 +21,7 @@ extension Spell: MySQLModel {
     static var entity = "spell"
 }
 
+extension Spell: Parameter { }
 extension Spell: Migration {
     typealias Database = MySQLDatabase
     static func prepare(on conn: Spell.Database.Connection) -> EventLoopFuture<Void> {
